@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ──────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+}
+
+/* ── Custom slider styling ─────────────────────────────────────────── */
+@layer components {
+  .range-slider {
+    @apply w-full h-1.5 rounded-full outline-none cursor-pointer appearance-none;
+  }
+  .range-slider::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-white cursor-pointer;
+    border: 2.5px solid #0052CC;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .range-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 6px rgba(0,82,204,0.15);
+    transform: scale(1.1);
+  }
+  .range-slider::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full bg-white cursor-pointer border-0;
+    border: 2.5px solid #0052CC;
+  }
+
+  /* Glass card */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl shadow-lg;
+  }
+
+  /* Apollo button */
+  .btn-apollo {
+    @apply w-full py-3.5 rounded-xl font-bold text-white text-base tracking-wide
+           transition-all duration-200 cursor-pointer border-0 outline-none;
+    background: linear-gradient(135deg, #003B8E 0%, #0052CC 100%);
+    box-shadow: 0 4px 16px rgba(0,59,142,0.3);
+  }
+  .btn-apollo:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0,59,142,0.4);
+  }
+  .btn-apollo:disabled { @apply opacity-40 cursor-not-allowed; transform: none; box-shadow: none; }
+
+  /* Status pill */
+  .pill-normal   { @apply text-emerald-700 bg-emerald-50  border border-emerald-200 text-xs font-bold px-2.5 py-0.5 rounded-full; }
+  .pill-high     { @apply text-red-700     bg-red-50      border border-red-200     text-xs font-bold px-2.5 py-0.5 rounded-full; }
+  .pill-border   { @apply text-amber-700   bg-amber-50    border border-amber-200   text-xs font-bold px-2.5 py-0.5 rounded-full; }
+  .pill-low      { @apply text-blue-700    bg-blue-50     border border-blue-200    text-xs font-bold px-2.5 py-0.5 rounded-full; }
+
+  /* Section label */
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2;
+  }
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }

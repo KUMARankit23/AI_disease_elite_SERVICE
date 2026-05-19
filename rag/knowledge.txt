@@ -1,0 +1,47 @@
+[diabetes]
+Diabetes is a chronic metabolic condition characterized by elevated blood glucose (hyperglycemia).
+Type 2 diabetes is the most common form and is strongly associated with obesity, sedentary lifestyle, and genetics.
+Key risk indicators: high fasting glucose (>126 mg/dL), elevated HbA1c (>6.5%), high BMI (>30), increased age, and family history.
+Glucose is the most important single predictor of diabetes risk.
+A DiabetesPedigreeFunction value above 0.5 indicates significant hereditary risk.
+BMI above 30 substantially increases diabetes risk; BMI above 35 is considered high risk.
+Insulin resistance, reflected by high insulin levels with elevated glucose, is a hallmark of pre-diabetes.
+Pregnancy-related glucose intolerance (gestational diabetes) raises lifetime diabetes risk.
+Lifestyle interventions (diet, exercise) can delay or prevent Type 2 diabetes in high-risk individuals.
+Uncontrolled diabetes leads to complications including neuropathy, retinopathy, nephropathy, and cardiovascular disease.
+
+[heart]
+Cardiovascular disease (CVD) is the leading cause of death worldwide.
+Coronary artery disease is caused by atherosclerosis — plaque buildup narrowing the coronary arteries.
+Key risk factors: age, male sex, hypertension (trestbps > 130 mmHg), high cholesterol (chol > 240 mg/dL), diabetes, smoking, and family history.
+Chest pain type (cp): 0=typical angina, 1=atypical angina, 2=non-anginal, 3=asymptomatic; asymptomatic chest pain in older patients is a red flag.
+Low maximum heart rate during exercise (thalach < 120 bpm) suggests poor cardiac reserve.
+Exercise-induced angina (exang=1) strongly indicates coronary artery disease.
+Elevated ST depression (oldpeak > 2.0) is a significant marker of myocardial ischemia.
+Number of major vessels (ca=0-3) colored by fluoroscopy correlates with disease severity.
+Thalassemia type 2 (reversible defect) and type 3 (fixed defect) indicate prior or ongoing cardiac ischemia.
+High cholesterol, elevated blood pressure, and diabetes together multiply cardiovascular risk exponentially.
+
+[kidney]
+Chronic Kidney Disease (CKD) involves progressive loss of kidney function over months or years.
+CKD affects approximately 10% of the global population and is often detected late due to lack of early symptoms.
+Key diagnostic markers: elevated serum creatinine (sc > 1.2 mg/dL), reduced hemoglobin (hemo < 12 g/dL), high blood urea (bu > 40 mg/dL), and low specific gravity (sg < 1.010).
+Albuminuria (al > 0) is one of the earliest signs of kidney damage.
+Hypertension (htn=1) is both a cause and consequence of CKD and accelerates its progression.
+Diabetes mellitus (dm=1) is the leading cause of CKD worldwide.
+Low packed cell volume (pcv < 30%) indicates anemia, a common CKD complication.
+Elevated potassium (pot > 5.5 mEq/L) and low sodium (sod < 135 mEq/L) indicate electrolyte imbalance in advanced CKD.
+Anemia in CKD results from reduced erythropoietin production by damaged kidneys.
+CKD stages 3-5 (GFR < 60 mL/min) require specialist nephrology care and possible dialysis preparation.
+
+[liver]
+Liver disease encompasses a wide range of conditions including fatty liver, hepatitis, cirrhosis, and liver cancer.
+The liver performs over 500 vital functions including detoxification, protein synthesis, and bile production.
+Key diagnostic enzymes: elevated ALT (Alamine_Aminotransferase > 40 IU/L) and AST (Aspartate_Aminotransferase > 40 IU/L) indicate hepatocyte damage.
+Total Bilirubin > 1.2 mg/dL and Direct Bilirubin > 0.3 mg/dL indicate impaired bile excretion or hemolysis.
+Elevated Alkaline Phosphotase (> 120 IU/L) suggests bile duct obstruction or bone disease.
+Low albumin (< 3.5 g/dL) indicates reduced liver synthetic function and is a marker of chronic liver disease severity.
+Low albumin-to-globulin ratio (< 1.0) suggests chronic liver disease or inflammation.
+Alcoholic liver disease, non-alcoholic fatty liver disease (NAFLD), and viral hepatitis (B and C) are the most common causes.
+AST/ALT ratio > 2 is characteristic of alcoholic liver disease; ratio < 1 is more typical of viral hepatitis.
+Liver fibrosis and cirrhosis are irreversible; early detection and lifestyle changes are critical.
