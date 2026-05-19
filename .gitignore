@@ -35,11 +35,17 @@ frontend/.env.production
 Thumbs.db
 *.zip
 
-# IDE
+# IDE / editor internals
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
+
+# Local dev scripts (not needed for deployment)
+run.sh
+data_pipeline/download_kaggle.py
+data_pipeline/standardize.py
 
 # Jupyter
 .ipynb_checkpoints/
