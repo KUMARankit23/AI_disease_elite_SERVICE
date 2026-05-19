@@ -1,7 +1,22 @@
+import os
 from openai import OpenAI
-from configs.settings import OPENAI_API_KEY, OPENAI_MODEL
+from configs.settings import OPENAI_MODEL
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+# Lazy client — created on first use so missing key doesn't crash startup
+_client = None
+
+
+def _get_client() -> OpenAI:
+    global _client
+    if _client is None:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise RuntimeError(
+                "OPENAI_API_KEY environment variable is not set. "
+                "Add it in Railway → Variables."
+            )
+        _client = OpenAI(api_key=api_key)
+    return _client
 
 
 def generate_explanation(
@@ -47,7 +62,7 @@ Please provide a concise, patient-friendly explanation with three sections:
 
 Keep the tone clear and supportive, avoid excessive medical jargon, and remind the patient this is a screening tool — not a diagnosis."""
 
-    response = client.chat.completions.create(
+    response = _get_client().chat.completions.create(
         model=OPENAI_MODEL,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=600,
